@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "homepage":"https://vikramkumaralpha.github.io/bookstoreclient/",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
