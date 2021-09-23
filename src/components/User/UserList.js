@@ -97,7 +97,7 @@ class UserList extends Component {
             <Card.Header>
               <FontAwesomeIcon icon={faUsers} /> User List
             </Card.Header>
-            <Card.Body>
+            <Card.Body style={{ overflowY: "auto" }}> 
               <Table bordered hover striped variant="light">
                 <thead>
                   <tr>

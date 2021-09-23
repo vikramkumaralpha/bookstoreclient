@@ -57,7 +57,7 @@ const Login = (props) => {
 
   return (
     <Row className="justify-content-md-center">
-      <Col xs={5}>
+      <Col lg={12}>
         {show && props.message && (
           <Alert variant="success" onClose={() => setShow(false)} dismissible>
             {props.message}
@@ -68,7 +68,7 @@ const Login = (props) => {
             {error}
           </Alert>
         )}
-        <Card className={"border text-primary"} style={{ backgroundColor:"#F8F8FF"}}>
+        <Card className={"border text-success"}  style={{ backgroundColor:"#F8F8FF"}}>
           <Card.Header>
             <FontAwesomeIcon icon={faSignInAlt} /> Login
           </Card.Header>

@@ -235,7 +235,7 @@ class BookList extends Component {
               </InputGroup>
             </div>
           </Card.Header>
-          <Card.Body>
+          <Card.Body style={{ overflowY: "auto" }}>
             <Table bordered hover striped variant="light">
               <thead>
                 <tr>

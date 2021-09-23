@@ -67,7 +67,7 @@ const Register = (props) => {
         <MyToast show={show} message={message} type={"success"} />
       </div>
       <Row className="justify-content-md-center">
-        <Col xs={5}>
+        <Col lg={12}>
           <Card className={"border  text-primary"}  style={{ backgroundColor:"#F8F8FF"}}>
             <Card.Header>
               <FontAwesomeIcon icon={faUserPlus} /> Register
