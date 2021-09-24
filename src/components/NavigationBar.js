@@ -53,7 +53,7 @@ const NavigationBar = () => {
   );
 
   return (
-    <Navbar bg="primary" variant="dark" expand="lg">
+    <Navbar  collapseOnSelect expand="lg" style={{ background: '#2E8B57', padding: 10, fontSize: 20 }} variant="dark">
       <Link to={auth.isLoggedIn ? "home" : ""} className="navbar-brand">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Book_icon_1.png"
@@ -63,7 +63,14 @@ const NavigationBar = () => {
         />{" "}
         Book Store
       </Link>
+
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
       {auth.isLoggedIn ? userLinks : guestLinks}
+      </Navbar.Collapse>
+
+
+      
     </Navbar>
   );
 };
