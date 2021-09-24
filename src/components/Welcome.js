@@ -16,7 +16,7 @@ const Welcome = (props) => {
   return (
     <Card bg="light" text="dark">
       <Card.Header>Quotes</Card.Header>
-      <Card.Body style={{ overflowY: "auto", height: "250px" }}>
+      <Card.Body style={{ overflowY: "auto", height: "251px", scrollbarColor: "red" }}>
         {quotes &&
           quotes.map((quote, id) => (
             <blockquote className="blockquote mb-0" key={id}>
