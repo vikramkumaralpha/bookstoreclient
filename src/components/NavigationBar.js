@@ -53,7 +53,7 @@ const NavigationBar = () => {
   );
 
   return (
-    <Navbar  collapseOnSelect expand="lg" style={{ background: '#2E8B57', padding: 10, fontSize: 20 }} variant="dark">
+    <Navbar  collapseOnSelect expand="lg" style={{ background: '#2E8B57', padding: 10, fontSize: 15 }} variant="dark">
       <Link to={auth.isLoggedIn ? "home" : ""} className="navbar-brand">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Book_icon_1.png"
