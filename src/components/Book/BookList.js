@@ -224,7 +224,7 @@ class BookList extends Component {
                   </Button>
                   <Button
                     size="sm"
-                    variant="outline-secondary"
+                    variant="outline-danger"
                     // style={{backgroundColor:"white", color:"#FF6347"}}
                     type="button"
                     onClick={this.cancelSearch}
@@ -235,7 +235,7 @@ class BookList extends Component {
               </InputGroup>
             </div>
           </Card.Header>
-          <Card.Body style={{ overflowY: "auto" }}>
+          <Card.Body style={{ overflow: "auto" }}>
             <Table bordered hover striped variant="light">
               <thead>
                 <tr>
@@ -305,7 +305,7 @@ class BookList extends Component {
             </Table>
           </Card.Body>
           {books.length > 0 ? (
-            <Card.Footer>
+            <Card.Footer style={{ overflow: "auto" }}>
               <div style={{ float: "left" }}>
                 Showing Page {currentPage} of {totalPages}
               </div>
@@ -334,6 +334,7 @@ class BookList extends Component {
                     name="currentPage"
                     value={currentPage}
                     onChange={this.changePage}
+                    size="sm"
                   />
                   <InputGroup.Append>
                     <Button

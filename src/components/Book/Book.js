@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import {
+  Row,
+} from "react-bootstrap";
 
 import { connect } from "react-redux";
 import {
@@ -171,7 +174,7 @@ class Book extends Component {
       this.state;
 
     return (
-      <div>
+      <div >
         <div style={{ display: this.state.show ? "block" : "none" }}>
           <MyToast
             show={this.state.show}
@@ -183,7 +186,9 @@ class Book extends Component {
             type={"success"}
           />
         </div>
-        <Card className={"border "}>
+        <Row className="justify-content-md-center">
+        <Col lg={12}>
+        <Card className={"border "} style={{overflowY:"auto"}}>
           <Card.Header>
             <FontAwesomeIcon icon={this.state.id ? faEdit : faPlusSquare} />{" "}
             {this.state.id ? "Update Book" : "Add New Book"}
@@ -193,27 +198,33 @@ class Book extends Component {
             onSubmit={this.state.id ? this.updateBook : this.submitBook}
             id="bookFormId"
           >
-            <Card.Body>
+            <Card.Body style={{ backgroundColor:"#F8F8FF"}}>
               <Form.Row>
+                
                 <Form.Group as={Col} controlId="formGridTitle">
-                  <Form.Label>Title</Form.Label>
+                
+                  <InputGroup>
+                  {/* <Form.Label>Title</Form.Label> */}
                   <Form.Control
                     required
                     autoComplete="off"
-                    type="test"
+                    type="text"
                     name="title"
                     value={title}
                     onChange={this.bookChange}
                     className={""}
                     placeholder="Enter Book Title"
                   />
+                  </InputGroup>
                 </Form.Group>
+                </Form.Row>
+                <Form.Row>
                 <Form.Group as={Col} controlId="formGridAuthor">
-                  <Form.Label>Author</Form.Label>
+                  {/* <Form.Label>Author</Form.Label> */}
                   <Form.Control
                     required
                     autoComplete="off"
-                    type="test"
+                    type="text"
                     name="author"
                     value={author}
                     onChange={this.bookChange}
@@ -224,12 +235,12 @@ class Book extends Component {
               </Form.Row>
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridCoverPhotoURL">
-                  <Form.Label>Cover Photo URL</Form.Label>
+                  {/* <Form.Label>Cover Photo URL</Form.Label> */}
                   <InputGroup>
                     <Form.Control
                       required
                       autoComplete="off"
-                      type="test"
+                      type="text"
                       name="coverPhotoURL"
                       value={coverPhotoURL}
                       onChange={this.bookChange}
@@ -248,12 +259,14 @@ class Book extends Component {
                     </InputGroup.Append>
                   </InputGroup>
                 </Form.Group>
+                </Form.Row>
+                <Form.Row>
                 <Form.Group as={Col} controlId="formGridISBNNumber">
-                  <Form.Label>ISBN Number</Form.Label>
+                  {/* <Form.Label>ISBN Number</Form.Label> */}
                   <Form.Control
                     required
                     autoComplete="off"
-                    type="test"
+                    type="number"
                     name="isbnNumber"
                     value={isbnNumber}
                     onChange={this.bookChange}
@@ -264,11 +277,11 @@ class Book extends Component {
               </Form.Row>
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridPrice">
-                  <Form.Label>Price</Form.Label>
+                  {/* <Form.Label>Price</Form.Label> */}
                   <Form.Control
                     required
                     autoComplete="off"
-                    type="test"
+                    type="number"
                     name="price"
                     value={price}
                     onChange={this.bookChange}
@@ -276,40 +289,50 @@ class Book extends Component {
                     placeholder="Enter Book Price"
                   />
                 </Form.Group>
+                </Form.Row>
+                <Form.Row>
                 <Form.Group as={Col} controlId="formGridLanguage">
-                  <Form.Label>Language</Form.Label>
+                  {/* <Form.Label>Language</Form.Label> */}
                   <Form.Control
                     
-                    as="select"
-                    custom
+                    // as="select"
+                    // custom
+                    required
                     onChange={this.bookChange}
+                    type="text"
                     name="language"
                     value={language}
                     className={""}
+                    placeholder="Enter Language"
                   >
-                    {this.state.languages.map((language) => (
+                    {/* {this.state.languages.map((language) => (
                       <option key={language.value} value={language.value}>
                         {language.display}
                       </option>
-                    ))}
+                    ))} */}
                   </Form.Control>
                 </Form.Group>
+                </Form.Row>
+                <Form.Row>
                 <Form.Group as={Col} controlId="formGridGenre">
-                  <Form.Label>Genre</Form.Label>
+                  {/* <Form.Label>Genre</Form.Label> */}
                   <Form.Control
                     
-                    as="select"
-                    custom
+                    // as="select"
+                    // custom
+                    required
                     onChange={this.bookChange}
+                    type="text"
                     name="genre"
                     value={genre}
+                    placeholder="Enter Genre"
                     className={""}
                   >
-                    {this.state.genres.map((genre) => (
+                    {/* {this.state.genres.map((genre) => (
                       <option key={genre.value} value={genre.value}>
                         {genre.display}
                       </option>
-                    ))}
+                    ))} */}
                   </Form.Control>
                 </Form.Group>
               </Form.Row>
@@ -333,7 +356,11 @@ class Book extends Component {
             </Card.Footer>
           </Form>
         </Card>
-      </div>
+        </Col>
+      </Row>
+      
+  </div>
+      
     );
   }
 }

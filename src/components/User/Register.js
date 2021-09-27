@@ -160,8 +160,8 @@ const Register = (props) => {
               <Button
                 size="sm"
                 type="button"
-                // variant="success"
-                style={{ backgroundColor: "#000080" }}
+                variant="primary"
+                // style={{ backgroundColor: "#000080" }}
                 onClick={saveUser}
                 disabled={user.email.length === 0 || user.password.length === 0}
               >
@@ -170,8 +170,8 @@ const Register = (props) => {
               <Button
                 size="sm"
                 type="button"
-                // variant="light"
-                style={{ backgroundColor: "#FFFACD", color:"blue" }}
+                variant="outline-primary"
+                // style={{ backgroundColor: "#FFFACD", color:"blue" }}
                 
                 onClick={resetRegisterForm}
               >

@@ -120,7 +120,8 @@ const Login = (props) => {
             <Button
               size="sm"
               type="button"
-              style={{ backgroundColor:"#006400"}}
+              variant="success"
+              // style={{ backgroundColor:"#006400"}}
               onClick={validateUser}
               disabled={user.email.length === 0 || user.password.length === 0}
             >
@@ -129,8 +130,8 @@ const Login = (props) => {
             <Button
               size="sm"
               type="button"
-              variant="outline-dark"
-              style={{  backgroundColor:"white" }}
+              variant="outline-success"
+              // style={{  backgroundColor:"white" }}
               onClick={resetLoginForm}
               disabled={user.email.length === 0 && user.password.length === 0}
             >

@@ -10,7 +10,7 @@ const Footer = () => {
   }, [fullYear]);
 
   return (
-    <Navbar fixed="bottom" variant="dark" style={{ background: '#2E8B57', padding: 10, fontSize: 15 }}>
+    <Navbar  variant="dark" style={{ background: '#075E54', padding: 10, fontSize: 15 }}>
       <Container>
         <Col lg={12} className="text-center text-white">
           <div>
